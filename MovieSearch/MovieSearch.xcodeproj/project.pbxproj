@@ -53,6 +53,7 @@
 		47DFC5CF28A14CF5009397D8 /* BoxOfficeMovieDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DFC5CE28A14CF5009397D8 /* BoxOfficeMovieDTO.swift */; };
 		47DFC5D128A2A101009397D8 /* ChartNetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DFC5D028A2A101009397D8 /* ChartNetworkRepository.swift */; };
 		47DFC5D328A2A21F009397D8 /* KOFICBoxOfficeNetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DFC5D228A2A21F009397D8 /* KOFICBoxOfficeNetworkRepository.swift */; };
+		47DFC60528ACCA54009397D8 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = 47DFC60428ACCA54009397D8 /* ReactorKit */; };
 		47EE0DEC286A62C700846EE9 /* MovieCoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EE0DEB286A62C700846EE9 /* MovieCoreDataRepository.swift */; };
 		47EE0DEE286A634500846EE9 /* CoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EE0DED286A634500846EE9 /* CoreDataRepository.swift */; };
 		47EE0DF0286A63D500846EE9 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EE0DEF286A63D500846EE9 /* CoreDataManager.swift */; };
@@ -123,6 +124,7 @@
 				479CD1D52869C29F00ABD0AB /* SnapKit in Frameworks */,
 				479CD1D22869C27400ABD0AB /* SDWebImage in Frameworks */,
 				477A76E8286A224C0028A292 /* RxCocoa in Frameworks */,
+				47DFC60528ACCA54009397D8 /* ReactorKit in Frameworks */,
 				479CD1A92869872900ABD0AB /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +401,7 @@
 				479CD1D12869C27400ABD0AB /* SDWebImage */,
 				479CD1D42869C29F00ABD0AB /* SnapKit */,
 				477A76E7286A224C0028A292 /* RxCocoa */,
+				47DFC60428ACCA54009397D8 /* ReactorKit */,
 			);
 			productName = MovieSearch;
 			productReference = 479CD190286985EA00ABD0AB /* MovieSearch.app */;
@@ -433,6 +436,7 @@
 				479CD1D02869C27400ABD0AB /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				479CD1D32869C29F00ABD0AB /* XCRemoteSwiftPackageReference "SnapKit" */,
 				477A76E6286A224C0028A292 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				47DFC60328ACCA54009397D8 /* XCRemoteSwiftPackageReference "ReactorKit" */,
 			);
 			productRefGroup = 479CD191286985EA00ABD0AB /* Products */;
 			projectDirPath = "";
@@ -750,6 +754,14 @@
 				minimumVersion = 5.6.0;
 			};
 		};
+		47DFC60328ACCA54009397D8 /* XCRemoteSwiftPackageReference "ReactorKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactorKit/ReactorKit.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 3.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -772,6 +784,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 479CD1D32869C29F00ABD0AB /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		47DFC60428ACCA54009397D8 /* ReactorKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 47DFC60328ACCA54009397D8 /* XCRemoteSwiftPackageReference "ReactorKit" */;
+			productName = ReactorKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 
