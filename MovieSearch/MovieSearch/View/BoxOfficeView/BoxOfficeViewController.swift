@@ -63,6 +63,7 @@ extension BoxOfficeViewController {
         setupCollectionViewConstraints()
         registerCollectionViewCell()
         setupCollectionViewDataSource()
+        boxOfficeCollectionView.backgroundColor = .secondarySystemBackground
     }
     
     private func setupCollectionViewConstraints() {
