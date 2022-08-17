@@ -47,10 +47,11 @@ extension BoxOfficeViewController {
     
     private func setupCollectionViewDataSource() {
         dataSource = UICollectionViewDiffableDataSource<Section, BoxOfficeMovie>(collectionView: boxOfficeCollectionView) { collectionView, indexPath, item in
-            guard let cell = collectionView.dequeueReusableCell(MovieCell.self, for: indexPath) else {
+            guard let cell = collectionView.dequeueReusableCell(BoxOfficeCell.self, for: indexPath) else {
                 return UICollectionViewCell()
             }
-
+            cell.setupCell(with: item)
+            
             return cell
         }
         boxOfficeCollectionView.dataSource = dataSource
