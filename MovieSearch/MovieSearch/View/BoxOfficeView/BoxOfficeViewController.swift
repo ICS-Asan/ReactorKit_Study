@@ -14,11 +14,42 @@ class BoxOfficeViewController: UIViewController {
     
     private var boxOfficeCollectionView = UICollectionView(frame: .zero, collectionViewLayout: MovieCollectionViewLayout.list())
     private var dataSource: UICollectionViewDiffableDataSource<Section, BoxOfficeMovie>?
+    private let testData: [BoxOfficeMovie] = [
+    BoxOfficeMovie(rank: "1",
+                   changedRankValue: "0",
+                   isNew: false, title: "헌트",
+                   openDate: "2022-08-10",
+                   dailyAudience: "504131",
+                   totalAudience: "1511592"
+                  ),
+    BoxOfficeMovie(rank: "2",
+                   changedRankValue: "1",
+                   isNew: true, title: "한산: 용의 출현",
+                   openDate: "2022-07-27",
+                   dailyAudience: "324007",
+                   totalAudience: "1511592"
+                  ),
+    BoxOfficeMovie(rank: "5",
+                   changedRankValue: "-1",
+                   isNew: true, title: "비상선언",
+                   openDate: "2022-08-03",
+                   dailyAudience: "82873",
+                   totalAudience: "1884005"
+                  ),
+    BoxOfficeMovie(rank: "10",
+                   changedRankValue: "3",
+                   isNew: false,
+                   title: "탑건: 매버릭",
+                   openDate: "2022-06-22",
+                   dailyAudience: "53850",
+                   totalAudience: "7667872")
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
         setupBoxOfficeCollectionView()
+        populate(movie: testData)
     }
     
     private func setupNavigationBar() {
@@ -42,7 +73,7 @@ extension BoxOfficeViewController {
     }
     
     private func registerCollectionViewCell() {
-        boxOfficeCollectionView.register(MovieCell.self)
+        boxOfficeCollectionView.register(BoxOfficeCell.self)
     }
     
     private func setupCollectionViewDataSource() {
