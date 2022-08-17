@@ -11,6 +11,11 @@ class BoxOfficeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupNavigationBar()
+    }
+    
+    private func setupNavigationBar() {
+        navigationItem.title = "일간 박스오피스"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
