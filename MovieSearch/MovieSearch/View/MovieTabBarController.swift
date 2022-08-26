@@ -1,7 +1,8 @@
 import UIKit
 
 class MovieTabBarController: UITabBarController {
-    let boxOfficeNavigationController = UINavigationController(rootViewController: BoxOfficeViewController())
+    let boxOfficeViewController = BoxOfficeViewController()
+    lazy var boxOfficeNavigationController = UINavigationController(rootViewController: boxOfficeViewController)
     let searchNavigationController = UINavigationController(rootViewController: MovieSearchViewController())
     let bookmarkNavigationController = UINavigationController(rootViewController: BookmarkListViewController())
     
@@ -23,6 +24,7 @@ class MovieTabBarController: UITabBarController {
     
     private func setupTabBarViews() {
         setViewControllers([boxOfficeNavigationController, searchNavigationController, bookmarkNavigationController], animated: true)
+        boxOfficeViewController.reactor = BoxOfficeViewReactor()
     }
     
     private func setupTabBarItem() {

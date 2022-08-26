@@ -40,6 +40,7 @@
 		479CD1D72869CF1200ABD0AB /* UIFont+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479CD1D62869CF1200ABD0AB /* UIFont+extension.swift */; };
 		479CD1D92869D25200ABD0AB /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479CD1D82869D25200ABD0AB /* MovieCell.swift */; };
 		479CD1DC2869FDE300ABD0AB /* CellReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479CD1DB2869FDE300ABD0AB /* CellReusable.swift */; };
+		479E3CC328B8BC1B00F0FF6B /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479E3CC228B8BC1B00F0FF6B /* UIViewController+Rx.swift */; };
 		47D7D249286A8CCC004D3F43 /* BookmarkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D7D248286A8CCC004D3F43 /* BookmarkListViewController.swift */; };
 		47D7D24B286A9B33004D3F43 /* BookmarkListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D7D24A286A9B33004D3F43 /* BookmarkListUseCase.swift */; };
 		47D7D24D286A9D5D004D3F43 /* BookmarkListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D7D24C286A9D5D004D3F43 /* BookmarkListViewModel.swift */; };
@@ -98,6 +99,7 @@
 		479CD1D62869CF1200ABD0AB /* UIFont+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+extension.swift"; sourceTree = "<group>"; };
 		479CD1D82869D25200ABD0AB /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		479CD1DB2869FDE300ABD0AB /* CellReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReusable.swift; sourceTree = "<group>"; };
+		479E3CC228B8BC1B00F0FF6B /* UIViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
 		47D7D248286A8CCC004D3F43 /* BookmarkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListViewController.swift; sourceTree = "<group>"; };
 		47D7D24A286A9B33004D3F43 /* BookmarkListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListUseCase.swift; sourceTree = "<group>"; };
 		47D7D24C286A9D5D004D3F43 /* BookmarkListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListViewModel.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 			children = (
 				479CD1BD28699A2800ABD0AB /* URLRequest+extension.swift */,
 				479CD1D62869CF1200ABD0AB /* UIFont+extension.swift */,
+				479E3CC228B8BC1B00F0FF6B /* UIViewController+Rx.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				47EE0DF2286A7FF500846EE9 /* MovieDetailUseCase.swift in Sources */,
 				47DFC5CB28A145FF009397D8 /* BoxOfficeInformationDTO.swift in Sources */,
 				47DFC5CF28A14CF5009397D8 /* BoxOfficeMovieDTO.swift in Sources */,
+				479E3CC328B8BC1B00F0FF6B /* UIViewController+Rx.swift in Sources */,
 				477A76E2286A20210028A292 /* ViewModelDescribing.swift in Sources */,
 				479CD1D92869D25200ABD0AB /* MovieCell.swift in Sources */,
 				47895B93286A37140031DD91 /* MovieDetailViewController.swift in Sources */,

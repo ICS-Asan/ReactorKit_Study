@@ -6,55 +6,50 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import ReactorKit
 
-class BoxOfficeViewController: UIViewController {
+class BoxOfficeViewController: UIViewController, View {
+    
     private enum Section {
         case list
     }
     
     private var boxOfficeCollectionView = UICollectionView(frame: .zero, collectionViewLayout: MovieCollectionViewLayout.list())
     private var dataSource: UICollectionViewDiffableDataSource<Section, BoxOfficeMovie>?
-    private let testData: [BoxOfficeMovie] = [
-    BoxOfficeMovie(rank: "1",
-                   changedRankValue: "0",
-                   isNew: false, title: "헌트",
-                   openDate: "2022-08-10",
-                   dailyAudience: "504131",
-                   totalAudience: "1511592"
-                  ),
-    BoxOfficeMovie(rank: "2",
-                   changedRankValue: "1",
-                   isNew: true, title: "한산: 용의 출현",
-                   openDate: "2022-07-27",
-                   dailyAudience: "324007",
-                   totalAudience: "1511592"
-                  ),
-    BoxOfficeMovie(rank: "5",
-                   changedRankValue: "-1",
-                   isNew: true, title: "비상선언",
-                   openDate: "2022-08-03",
-                   dailyAudience: "82873",
-                   totalAudience: "1884005"
-                  ),
-    BoxOfficeMovie(rank: "10",
-                   changedRankValue: "3",
-                   isNew: false,
-                   title: "탑건: 매버릭",
-                   openDate: "2022-06-22",
-                   dailyAudience: "53850",
-                   totalAudience: "7667872")
-    ]
+    var disposeBag: DisposeBag = .init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
         setupBoxOfficeCollectionView()
-        populate(movie: testData)
     }
     
     private func setupNavigationBar() {
         navigationItem.title = "일간 박스오피스"
         navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    func bind(reactor: BoxOfficeViewReactor) {
+        bindAction(reactor)
+        bindState(reactor)
+    }
+    
+    private func bindAction(_ reactor: BoxOfficeViewReactor) {
+        self.rx.viewDidLoad
+            .map { Reactor.Action.load }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindState(_ reactor: BoxOfficeViewReactor) {
+        reactor.state
+            .map { $0.currentBoxOffice }
+            .subscribe (onNext: { [weak self] movies in
+                self?.populate(movie: movies)
+            })
+            .disposed(by: disposeBag)
     }
 }
 
